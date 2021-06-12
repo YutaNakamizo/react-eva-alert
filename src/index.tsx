@@ -1,6 +1,10 @@
 import React from 'react';
 
-export const Test = ({
+export interface TestProps {
+  text?: string,
+};
+
+export const Test: React.FC<TestProps> = ({
   text,
   ...props
 }) => {

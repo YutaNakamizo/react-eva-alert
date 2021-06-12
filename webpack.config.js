@@ -24,6 +24,11 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
+        test: /\.tsx?/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
+      {
         test: /\.css$/,
         use: [ "style-loader", "css-loader" ],
       },
@@ -31,7 +36,7 @@ module.exports = {
   },
   plugins: [ htmlWebpackPlugin ],
   resolve: {
-    extensions: [ '.js', '.jsx' ],
+    extensions: [ '.js', '.jsx', '.ts', '.tsx' ],
   },
   devServer: {
     port: 3000,
